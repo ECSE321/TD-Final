@@ -75,4 +75,18 @@ public class Map {
 		}
 		setLastTile(tiles.get(tiles.size()-1));
 	}
+	
+	public void addLandscape(int[][] binaryMapMatrix) {
+		int size = binaryMapMatrix.length;
+		for(int i=0;i<size;i++) {
+			for(int j=0;j<size;j++) {
+				if(binaryMapMatrix[j][i] == 0) {
+					Vector2D v = new Vector2D(i*50,j*50);
+					System.out.println(j + " " + i);
+					Tile t = new Tile(v);
+					addTile(t);
+				}
+			}
+		}
+	}
 }
