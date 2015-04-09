@@ -60,7 +60,7 @@ public abstract class Tower extends Observable {
     {
        
             
-                setRange(getRange()+50);
+                setRange(getRange()+5);
                 setRefundValue((upgradeCost*level)/3);
                 setPower(getPower()*(2*level));
                 setRateOfFire(getRateOfFire()*(level));
