@@ -81,7 +81,7 @@ public class NewJFrame extends javax.swing.JFrame implements View {
 		        List<Critter> critters = model.getCrittersList();
 		        for(Critter c : critters) {
 		        	if(c instanceof FastCritter) {
-		        		g.setColor(Color.pink);
+		        		g.setColor(Color.black);
 		        	}else if(c instanceof TankCritter) {
 		        		g.setColor(Color.green);
 		        	} else {
