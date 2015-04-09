@@ -20,7 +20,7 @@ public class pathCreator
 {
 	
 	static File mapload;
-	int[][] arrayMap = new int[MapEditor.map.mapHeight][MapEditor.map.mapWidth];
+	public int[][] arrayMap = new int[MapEditor.map.mapHeight][MapEditor.map.mapWidth];
 	Pt startPoint;
 	Pt endPoint;
 	PathSequencer maz;
