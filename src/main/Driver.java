@@ -1,6 +1,7 @@
 package main;
 
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -10,6 +11,7 @@ import java.util.concurrent.CountDownLatch;
 import javax.swing.SwingUtilities;
 
 import MapEditor.GameDisplay;
+import MapEditor.pathCreator;
 import main.model.GameLogic;
 import main.model.Vector2D;
 import main.model.map.Map;
@@ -44,7 +46,8 @@ public class Driver implements Runnable{
 		
 		path=gd.pathVector;
 		
-		
+		pathCreator pc = new pathCreator(new File("src/main/mapsaves/newMap.txt"));
+		final int[][] binaryMap = pc.arrayMap;
 		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run(){
@@ -53,9 +56,10 @@ public class Driver implements Runnable{
 				Map map = new Map();
 				
 				map.tracePath(path);
+				map.addLandscape(binaryMap);
 		
 				
-			
+			/*
 			for(int i=0; i<=400; i=i+50)
 				{
 					for(int j=0; j<=400; j=j+50)
@@ -80,8 +84,11 @@ public class Driver implements Runnable{
 						
 					}
 				}
+				*/
+			
+					
 				
-			map.tracePath(path);
+				
 				
 				/*
 				 * END TESTING
